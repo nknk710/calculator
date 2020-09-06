@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>オリジナル電卓</title>
+</head>
+<body>
+  <div class="form">
+    <div>
+      <table border="2">
+        <tr>
+          <td colspan="5" class="dis"><input type="text" id="display" class="" value="0" disabled></td>
+        </tr>
+        <tr>
+          <td><input type="button" class="btn" value="7"></td>
+          <td><input type="button" class="btn" value="8"></td>
+          <td><input type="button" class="btn" value="9"></td>
+          <td><input type="button" class="symbol" value="÷"></td>
+          <td><input type="button" class="symbol" value="×"></td>
+        </tr>
+        <tr>
+          <td><input type="button" class="btn" value="4"></td>
+          <td><input type="button" class="btn" value="5"></td>
+          <td><input type="button" class="btn" value="6"></td>
+          <td><input type="button"  class="symbol"value="+"></td>
+          <td><input type="button" id="min" class="other" value="−"></td>
+        </tr>
+        <tr>
+          <td><input type="button" class="btn" value="1"></td>
+          <td><input type="button" class="btn" value="2"></td>
+          <td><input type="button" class="btn" value="3"></td>
+          <td colspan="2"><input type="button" id="clear" class="other" value="AC"></td>
+        </tr>
+        <tr>
+          <td><input type="button" class="btn"value="0"></td>
+          <td><input type="button" id ="dot" value="."></td>
+          <td colspan="3"><input type="button" id="equal"  class="other"value="＝"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="memo">
+    <p>メモ</p>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
