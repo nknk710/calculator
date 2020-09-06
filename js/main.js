@@ -1,17 +1,20 @@
 'use strict';
 
 {
+  // 文字列を数式に変換し計算結果を得る
   function safeEval(val){
     console.log(val);
     return Function('return ('+val+')')();
   }
 
+  // ans_countをリセット
   function ansCountReset() {
     if (ans_count > 0) {
       ans_count = 0;
     }
   }
 
+  // dot_countをリセット
   function dotCountReset() {
     if (dot_count > 0) {
       dot_count = 0;
@@ -29,6 +32,7 @@
   const clear = document.getElementById('clear');
   const equal = document.getElementById('equal');
   
+  // 数字がクリックされたときの処理
   for (let i = 0; i < btn.length; i++) {
     btn[i].addEventListener('click', function(){
       if (display.value == 0) {
@@ -47,6 +51,7 @@
     });
   }
 
+  // ÷, ×, +がクリックされたときの処理
   for (let i = 0; i < symbol.length; i++) {
     symbol[i].addEventListener('click', function(){
       ansCountReset();
@@ -72,6 +77,7 @@
     });
   }
 
+  // -がクリックされたときの処理
   min.addEventListener('click', function(){
     if (isFinite(display.value.slice(-1))) {
       dotCountReset();
@@ -92,6 +98,7 @@
     }
   });
 
+  // .がクリックされたときの処理
   dot.addEventListener('click', function(){
     if (dot_count == 0 && ans_count == 0){
       if (isFinite(display.value.slice(-1))) {
@@ -102,12 +109,14 @@
     } 
   });
 
+  // ACがクリックされたときの処理
   clear.addEventListener('click', function(){
     ansCountReset();
     dotCountReset();
     display.value = 0;
   });
 
+  // =がクリックされたときの処理
   equal.addEventListener('click', function(){
     if (isFinite(display.value.slice(-1))) {
       display.value = safeEval(answer);
