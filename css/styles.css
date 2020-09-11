@@ -2,6 +2,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   font-size: 1.7rem;
+  background-color: rgb(224, 244, 245);
 }
 
 .form {
@@ -13,7 +14,8 @@ body {
 }
 
 table {
-  margin: 30px auto;
+  margin: 50px auto 30px;
+  background-color: rgb(180, 180, 178);
 }
 
 #display {
@@ -57,7 +59,7 @@ table {
 }
 
 .btn:hover {
-  background-color: rgb(179, 179, 174);
+  background-color: rgb(194, 199, 194);
   font-size: 2.6rem;
 }
 
@@ -67,12 +69,13 @@ table {
 }
 
 #dot:hover {
-  background-color: rgb(179, 179, 174);
+  background-color: rgb(194, 199, 194);
   font-size: 2.6rem;
 }
 
 .memo {
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .memo p {
@@ -82,6 +85,6 @@ table {
 textarea {
   width: 700px;
   height: 400px;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   border: 2px solid rgb(175, 173, 173);
 }
